@@ -15,23 +15,31 @@ const UserPasswords = props => {
 
   return (
     <li className="list-container">
-      <div className={`letter-container ${randomColors}`}>
-        <p>{initialLetter}</p>
+      <div className="letter-website-container">
+        <div className={`letter-container ${randomColors}`}>
+          <p>{initialLetter}</p>
+        </div>
+        <div className="website-container">
+          <p className="website-name">{webSite}</p>
+          <p className="website-name">{userName}</p>
+          {showPassword ? (
+            <p className="website-name">{pass}</p>
+          ) : (
+            <img
+              className="stars-icon"
+              alt="stars"
+              src="https://assets.ccbp.in/frontend/react-js/password-manager-stars-img.png"
+            />
+          )}
+        </div>
       </div>
-      <div>
-        <p>{webSite}</p>
-        <p>{userName}</p>
-        {showPassword ? (
-          <p>{pass}</p>
-        ) : (
-          <img
-            className="stars-icon"
-            alt="stars"
-            src="https://assets.ccbp.in/frontend/react-js/password-manager-stars-img.png"
-          />
-        )}
-      </div>
-      <button data-testid="delete" onClick={deletePassword} type="button">
+
+      <button
+        className="delete-button"
+        data-testid="delete"
+        onClick={deletePassword}
+        type="button"
+      >
         <img
           className="delete-icon"
           alt="delete"

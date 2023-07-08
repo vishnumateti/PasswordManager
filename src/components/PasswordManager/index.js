@@ -87,8 +87,13 @@ class PasswordManager extends Component {
           />
         </nav>
         <div className="card-container">
+          <img
+            className="password-manager-image"
+            alt="password-manager"
+            src="https://assets.ccbp.in/frontend/react-js/password-manager-sm-img.png"
+          />
           <form className="form-container" onSubmit={this.addNewPassword}>
-            <h1>Add New Password</h1>
+            <h1 className="password-heading">Add New Password</h1>
             <div className="input-elements-container">
               <img
                 className="input-logos"
@@ -128,6 +133,7 @@ class PasswordManager extends Component {
                 type="password"
                 placeholder="Enter Password"
                 value={password}
+                onChange={this.userPassword}
               />
             </div>
             <button className="add-button" type="submit">
@@ -143,8 +149,10 @@ class PasswordManager extends Component {
         <div className="bottom-container">
           <div className="password-search-container">
             <div className="password-length-container">
-              <h1 className="password-heading">Your Passwords</h1>
-              <p className="pass-length">{newPasswordList.length}</p>
+              <h1 className="password-heading1">Your Passwords</h1>
+              <div className="pass-length">
+                <p className="pass-num">{newPasswordList.length}</p>
+              </div>
             </div>
             <div className="input-elements-container-search">
               <img
@@ -153,7 +161,7 @@ class PasswordManager extends Component {
                 src="https://assets.ccbp.in/frontend/react-js/password-manager-search-img.png"
               />
               <input
-                className="input-elements"
+                className="input-element-search"
                 type="search"
                 placeholder="Search"
                 onChange={this.searchInputValue}
@@ -161,7 +169,7 @@ class PasswordManager extends Component {
               />
             </div>
           </div>
-          <div>
+          <div className="checkbox-section">
             <div className="checkbox-container">
               <input
                 onClick={this.showsPassword}

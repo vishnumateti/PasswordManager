@@ -1,0 +1,49 @@
+.list-container {
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  margin: 5px;
+}
+.letter-container {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.green {
+  background-color: #10b981;
+}
+.yellow {
+  background-color: #f59e0b;
+}
+.red {
+  background-color: #b91c1c;
+}
+.blue {
+  background-color: #0b69ff;
+}
+.orange {
+  background-color: #f97316;
+}
+.grey {
+  background-color: #64748b;
+}
+.skyblue {
+  background-color: #0ea5e9;
+}
+.stars-icon {
+  width: 50px;
+  height: 30px;
+}
+.delete-icon {
+  width: 50px;
+  height: 30px;
+}
